@@ -1,3 +1,6 @@
+.idea
+Es_Product.iml
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
