@@ -22,4 +22,16 @@ public class Product implements Promotion {
     public int getDiscountAmount() {
         return 0;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
 }
