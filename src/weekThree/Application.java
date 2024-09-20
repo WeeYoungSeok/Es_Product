@@ -1,10 +1,13 @@
 package weekThree;
 
+import weekThree.domain.AddressBook;
 import weekThree.view.InputView;
 import weekThree.view.constans.ErrorMessage;
 import weekThree.view.constans.MenuMessage;
 
 public class Application {
+    private final AddressBook addressBook = new AddressBook();
+
     public static void main(String[] args) {
         run();
     }
@@ -12,11 +15,7 @@ public class Application {
     public static void run() {
         while (true) {
             // 메뉴 선택
-            int menuNumber = menuPrintAndGetMenuNumber();
-            // 메뉴 번호가 종료라면 프로그램 종료
-            if (isExit(menuNumber)) {
-                break;
-            }
+            choiceMenu(menuPrintAndGetMenuNumber());
         }
     }
 
@@ -35,6 +34,13 @@ public class Application {
             } finally {
                 System.out.println();
             }
+        }
+    }
+
+    public static void choiceMenu(int menuNumber) {
+        // 종료 먼저 확인
+        if (isExit(menuNumber)) {
+            System.exit(0);
         }
     }
 }
