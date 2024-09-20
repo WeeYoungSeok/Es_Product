@@ -11,7 +11,7 @@ public enum InputMessage {
     BUSINESS_COMPANY_NAME("회사명을 입력하세요: ↵"),
 
     // 개인
-    PRIVATE_RELATION("이름을 입력하세요: ↵"),
+    PRIVATE_RELATION("관계를 입력하세요: ↵"),
 
     // 연락처 검색
     NAME_SEARCH("검색할 이름을 입력하세요: ↵");
