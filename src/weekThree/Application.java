@@ -2,6 +2,7 @@ package weekThree;
 
 import weekThree.domain.AddressBook;
 import weekThree.service.BusinessContactServiceImpl;
+import weekThree.service.PersonalContactServiceImpl;
 import weekThree.view.InputView;
 import weekThree.view.constans.ErrorMessage;
 import weekThree.view.constans.MenuMessage;
@@ -9,6 +10,7 @@ import weekThree.view.constans.MenuMessage;
 public class Application {
     private static final AddressBook addressBook = new AddressBook();
     private static final BusinessContactServiceImpl businessContactService = new BusinessContactServiceImpl();
+    private static final PersonalContactServiceImpl personalContactService = new PersonalContactServiceImpl();
 
     public static void main(String[] args) {
         run();
@@ -48,6 +50,10 @@ public class Application {
         switch (MenuMessage.fromNumber(menuNumber)) {
             case BUSINESS_CONTACT_ADD: {
                 addressBook.addContact(businessContactService.addContact());
+                break;
+            }
+            case PRIVATE_CONTACT_ADD: {
+                addressBook.addContact(personalContactService.addContact());
                 break;
             }
         }

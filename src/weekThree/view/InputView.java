@@ -37,4 +37,9 @@ public class InputView {
         System.out.print(InputMessage.BUSINESS_COMPANY_NAME.getMessage());
         return sc.nextLine();
     }
+
+    public static String getRelationshipInput() {
+        System.out.print(InputMessage.PRIVATE_RELATION.getMessage());
+        return sc.nextLine();
+    }
 }
