@@ -24,7 +24,7 @@ public class Contact {
     }
 
     private void phoneNumberValidation(String phoneNumber) {
-        if (!Regx.PHONE_NUMBER_REGX.getPattern().matches(phoneNumber)) {
+        if (!phoneNumber.matches(Regx.PHONE_NUMBER_REGX.getPattern())) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_PHONE_NUMBER_FORMAT.getMessage());
         }
     }
