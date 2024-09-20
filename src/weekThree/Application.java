@@ -48,6 +48,10 @@ public class Application {
                 addressBook.displayContacts();
                 break;
             }
+            case CONTACT_SEARCH: {
+                addressBook.searchContact(InputView.getSearchNameInput());
+                break;
+            }
             case EXIT: {
                 System.out.println(OutputMessage.EXIT.getMessage());
                 System.exit(0);
