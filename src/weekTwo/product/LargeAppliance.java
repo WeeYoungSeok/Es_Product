@@ -1,4 +1,4 @@
-package product;
+package weekTwo.product;
 
 import java.math.BigDecimal;
 

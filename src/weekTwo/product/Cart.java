@@ -1,6 +1,6 @@
-package product;
+package weekTwo.product;
 
-import delivery.DeliveryChargeCalculator;
+import weekTwo.delivery.DeliveryChargeCalculator;
 
 import java.math.BigDecimal;
 

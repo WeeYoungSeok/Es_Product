@@ -1,6 +1,6 @@
-package product;
+package weekTwo.product;
 
-import event.Promotion;
+import weekTwo.event.Promotion;
 
 import java.math.BigDecimal;
 
