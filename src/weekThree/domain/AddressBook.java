@@ -22,7 +22,6 @@ public class AddressBook {
         } else {
             this.contacts.forEach(Contact::print);
         }
-        System.out.println();
     }
 
     public void searchContact(String name) {
@@ -32,7 +31,7 @@ public class AddressBook {
                 .count() > 0;
 
         if (!isFound) {
-            System.out.println(OutputMessage.CONTACT_NOT_FOUND.getMessage());
+            throw new IllegalArgumentException(OutputMessage.CONTACT_NOT_FOUND.getMessage());
         }
     }
 }

@@ -7,16 +7,8 @@ public class BusinessContactServiceImpl implements ContactInterface<BusinessCont
 
     @Override
     public BusinessContact addContact() {
-        while (true) {
-            try {
-                return new BusinessContact(InputView.getNameInput(),
-                        InputView.getPhoneNumberInput(),
-                        InputView.getCompanyNameInput());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            } finally {
-                System.out.println();
-            }
-        }
+        return new BusinessContact(InputView.getNameInput(),
+                InputView.getPhoneNumberInput(),
+                InputView.getCompanyNameInput());
     }
 }

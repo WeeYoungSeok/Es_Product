@@ -7,16 +7,8 @@ public class PersonalContactServiceImpl implements ContactInterface<PersonalCont
 
     @Override
     public PersonalContact addContact() {
-        while (true) {
-            try {
-                return new PersonalContact(InputView.getNameInput(),
-                        InputView.getPhoneNumberInput(),
-                        InputView.getRelationshipInput());
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            } finally {
-                System.out.println();
-            }
-        }
+        return new PersonalContact(InputView.getNameInput(),
+                InputView.getPhoneNumberInput(),
+                InputView.getRelationshipInput());
     }
 }

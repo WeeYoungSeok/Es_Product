@@ -20,6 +20,7 @@ public class InputView {
         StringValidation.isEmpty(menuNumberStr.trim());
         int menuNumber = Integer.parseInt(menuNumberStr);
         InputValidation.menuSelectNumberValidation(menuNumber);
+        System.out.println();
         return menuNumber;
     }
 
@@ -41,5 +42,12 @@ public class InputView {
     public static String getRelationshipInput() {
         System.out.print(InputMessage.PRIVATE_RELATION.getMessage());
         return sc.nextLine();
+    }
+
+    public static String getSearchNameInput() {
+        System.out.print(InputMessage.NAME_SEARCH.getMessage());
+        String name = sc.nextLine();
+        StringValidation.isEmpty(name);
+        return name;
     }
 }
