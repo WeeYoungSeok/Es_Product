@@ -22,4 +22,19 @@ public class InputView {
         InputValidation.menuSelectNumberValidation(menuNumber);
         return menuNumber;
     }
+
+    public static String getNameInput() {
+        System.out.print(InputMessage.NAME.getMessage());
+        return sc.nextLine();
+    }
+
+    public static String getPhoneNumberInput() {
+        System.out.print(InputMessage.CONTACT.getMessage());
+        return sc.nextLine();
+    }
+
+    public static String getCompanyNameInput() {
+        System.out.print(InputMessage.BUSINESS_COMPANY_NAME.getMessage());
+        return sc.nextLine();
+    }
 }
