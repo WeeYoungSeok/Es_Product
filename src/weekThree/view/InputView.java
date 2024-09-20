@@ -11,7 +11,7 @@ public class InputView {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    public static Integer menuPrintAndGetSelectNumber() {
+    public static Integer getMenuSelection() {
         for (MenuMessage message : MenuMessage.values()) {
             System.out.println(message.getMessage());
         }

@@ -26,7 +26,7 @@ public class Application {
     public static int menuPrintAndGetMenuNumber() {
         while (true) {
             try {
-                return InputView.menuPrintAndGetSelectNumber();
+                return InputView.getMenuSelection();
             } catch (NumberFormatException e) {
                 System.out.println(ErrorMessage.MENU_INPUT_NOT_NUMBER.getMessage());
             } catch (IllegalArgumentException e) {
