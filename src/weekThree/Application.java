@@ -56,6 +56,10 @@ public class Application {
                 addressBook.addContact(personalContactService.addContact());
                 break;
             }
+            case CONTACT_PRINT: {
+                addressBook.displayContacts();
+                break;
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ public class AddressBook {
         } else {
             this.contacts.forEach(Contact::print);
         }
+        System.out.println();
     }
 
     public void searchContact(String name) {
