@@ -16,9 +16,10 @@ public class InputView {
             System.out.println(message.getMessage());
         }
         System.out.print(InputMessage.MENU_CHOICE.getMessage());
-        String menuNumber = sc.nextLine();
-        StringValidation.isEmpty(menuNumber);
-        InputValidation.menuSelectNumberValidation(menuNumber.trim());
-        return Integer.parseInt(menuNumber);
+        String menuNumberStr = sc.nextLine();
+        StringValidation.isEmpty(menuNumberStr.trim());
+        int menuNumber = Integer.parseInt(menuNumberStr);
+        InputValidation.menuSelectNumberValidation(menuNumber);
+        return menuNumber;
     }
 }
