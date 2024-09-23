@@ -20,14 +20,14 @@ public class AddressBook {
         if (this.contacts.isEmpty()) {
             System.out.println(OutputMessage.CONTACT_EMPTY.getMessage());
         } else {
-            this.contacts.forEach(Contact::print);
+            this.contacts.forEach(System.out::println);
         }
     }
 
     public void searchContact(String name) {
         boolean isFound = this.contacts.stream()
                 .filter(contact -> contact.getName().equals(name))
-                .peek(Contact::print)
+                .peek(System.out::println)
                 .count() > 0;
 
         if (!isFound) {

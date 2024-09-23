@@ -17,8 +17,7 @@ public class BusinessContact extends Contact {
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(String.format(OutputMessage.BUSINESS_PRINT.getMessage(), this.company));
+    public String toString() {
+        return super.toString() + String.format(OutputMessage.BUSINESS_PRINT.getMessage(), this.company);
     }
 }

@@ -17,8 +17,7 @@ public class PersonalContact extends Contact {
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(String.format(OutputMessage.RELATION_PRINT.getMessage(), this.relationship));
+    public String toString() {
+        return super.toString() + String.format(OutputMessage.RELATION_PRINT.getMessage(), this.relationship);
     }
 }

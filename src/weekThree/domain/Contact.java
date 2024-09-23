@@ -38,7 +38,8 @@ public class Contact {
         return phoneNumber;
     }
 
-    public void print() {
-        System.out.print(String.format(OutputMessage.CONTACT_PRINT.getMessage(), this.name, this.phoneNumber));
+    @Override
+    public String toString() {
+        return String.format(OutputMessage.CONTACT_PRINT.getMessage(), this.name, this.phoneNumber);
     }
 }
