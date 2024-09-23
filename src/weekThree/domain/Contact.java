@@ -3,6 +3,7 @@ package weekThree.domain;
 import weekThree.contants.Regx;
 import weekThree.validation.StringValidation;
 import weekThree.view.constans.ErrorMessage;
+import weekThree.view.constans.OutputMessage;
 
 public class Contact {
     private String name;
@@ -38,6 +39,6 @@ public class Contact {
     }
 
     public void print() {
-
+        System.out.print(String.format(OutputMessage.CONTACT_PRINT.getMessage(), this.name, this.phoneNumber));
     }
 }
